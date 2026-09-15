@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartOpz Case Study | Arivuselvi GM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --ink: #111827;
+      --text: #374151;
+      --line: #e5e7eb;
+      --bg: #ffffff;
+      
+      /* New Editorial Palette */
+      --teal-dark: #135359; 
+      --teal-light: #eef5f5; 
+      --teal-pale: #f2fafa;
+      --peach: #fcece3;
+      --peach-dark: #a16447;
+      --accent-blue: #0055FF;
+      --hero-sans: "Inter", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--hero-sans);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    .cs-sidebar {
+      width: 300px;
+      min-width: 300px;
+      height: 100vh;
+      border-right: 1px solid var(--line);
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      background: #fafafa;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: white;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      align-self: flex-start;
+      margin-bottom: 40px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .back-btn:hover {
+      background: #f3f4f6;
+      border-color: #d1d5db;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      list-style: none;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: #9ca3af;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .nav-item:hover {
+      color: var(--teal-dark);
+      background: #f3f4f6;
+    }
+
+    .nav-item.active {
+      color: var(--teal-dark);
+      font-weight: 600;
+      background: var(--teal-pale);
+    }
+
+    .nav-item.active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      bottom: 10px;
+      width: 4px;
+      background: var(--teal-dark);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .nav-num {
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0.7;
+      width: 20px;
+    }
+
+    .nav-item.active .nav-num {
+      color: var(--teal-dark);
+      opacity: 1;
+    }
+
+    /* Main Content Area */
+    .cs-content {
+      flex: 1;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 80px 100px 160px;
+      scroll-behavior: smooth;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cs-section {
+      width: 100%;
+      max-width: 840px;
+      margin-bottom: 80px;
+    }
+    
+    .cs-divider {
+      border-top: 1px solid var(--line);
+      padding-top: 40px;
+      margin-top: 40px;
+    }
+
+    /* Typography */
+    h1.hero-title {
+      font-size: 52px;
+      color: #000000;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    h2.hero-subtitle {
+      font-size: 26px;
+      color: var(--teal-dark);
+      font-weight: 700;
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+
+    .cs-section h1.section-title {
+      font-size: 24px;
+      color: var(--teal-dark);
+      margin-bottom: 32px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .cs-section h1.section-title span.num {
+      color: #9ca3af;
+      font-weight: 400;
+    }
+
+    .cs-section p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    /* Meta Info */
+    .cs-meta-grid {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      row-gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .cs-meta-grid strong {
+      color: var(--teal-dark);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .cs-meta-grid span {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    /* Stats Banner */
+    .stats-banner {
+      background: var(--teal-light);
+      padding: 24px 32px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .stats-item strong {
+      display: block;
+      color: var(--teal-dark);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .stats-item span {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    /* Numbered Lists (Challenge, Approach) */
+    .num-list {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--line);
+    }
+    
+    .num-list-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .num-list-num {
+      color: var(--teal-dark);
+      font-size: 20px;
+      font-weight: 700;
+    }
+    
+    .num-list-content h3 {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #000000;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    
+    .num-list-content p {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+    
+    .num-list.approach .num-list-content h3 {
+      text-transform: none;
+      letter-spacing: normal;
+      font-size: 18px;
+    }
+
+    /* Tables */
+    .cs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 32px;
+    }
+    
+    .cs-table th {
+      text-align: left;
+      padding: 16px 24px;
+      font-size: 15px;
+      color: white;
+      font-weight: 700;
+      background: var(--teal-dark);
+    }
+    
+    .cs-table th:first-child { width: 60px; }
+    
+    .cs-table td {
+      padding: 24px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    
+    .cs-table tr:nth-child(even) td {
+      background: #fcfcfc;
+    }
+
+    .principle-box {
+      background: var(--teal-pale);
+      padding: 16px 24px;
+      grid-column: 1 / -1;
+      font-size: 14px;
+      color: #4b5563;
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .principle-box strong {
+      color: var(--teal-dark);
+    }
+
+    /* Results Table */
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+    }
+    
+    .results-table th {
+      text-align: left;
+      padding: 16px 24px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    
+    .results-table th.before {
+      background: var(--peach);
+      color: var(--peach-dark);
+      width: 45%;
+    }
+    
+    .results-table th.arrow {
+      background: #fafafa;
+      width: 10%;
+      text-align: center;
+    }
+
+    .results-table th.after {
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      width: 45%;
+    }
+    
+    .results-table td {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+      vertical-align: top;
+    }
+
+    .results-table td.arrow-cell {
+      text-align: center;
+      color: #9ca3af;
+    }
+    
+    .placeholder-box {
+      background: var(--teal-light);
+      padding: 32px;
+      color: var(--teal-dark);
+      font-style: italic;
+      font-size: 15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="cs-sidebar">
+    <a href="index.html" class="back-btn">← Back</a>
+    
+    <ul class="nav-list">
+      <li class="nav-item active" data-target="overview">
+        <span class="nav-num"></span>
+        <span>Overview</span>
+      </li>
+      <li class="nav-item" data-target="context">
+        <span class="nav-num">01</span>
+        <span>Business Context</span>
+      </li>
+      <li class="nav-item" data-target="challenge">
+        <span class="nav-num">02</span>
+        <span>The Challenge</span>
+      </li>
+      <li class="nav-item" data-target="approach">
+        <span class="nav-num">03</span>
+        <span>My Approach</span>
+      </li>
+      <li class="nav-item" data-target="decisions">
+        <span class="nav-num">04</span>
+        <span>Key Decisions</span>
+      </li>
+      <li class="nav-item" data-target="screens">
+        <span class="nav-num">05</span>
+        <span>Figma Screens</span>
+      </li>
+      <li class="nav-item" data-target="system">
+        <span class="nav-num">06</span>
+        <span>The System</span>
+      </li>
+      <li class="nav-item" data-target="content">
+        <span class="nav-num">07</span>
+        <span>Content Model</span>
+      </li>
+      <li class="nav-item" data-target="language">
+        <span class="nav-num">08</span>
+        <span>Design Language</span>
+      </li>
+      <li class="nav-item" data-target="alignment">
+        <span class="nav-num">09</span>
+        <span>Team Alignment</span>
+      </li>
+      <li class="nav-item" data-target="results">
+        <span class="nav-num">10</span>
+        <span>Results</span>
+      </li>
+      <li class="nav-item" data-target="learned">
+        <span class="nav-num">11</span>
+        <span>What I Learned</span>
+      </li>
+      <li class="nav-item" data-target="next">
+        <span class="nav-num">12</span>
+        <span>Next Step</span>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Content Area -->
+  <main class="cs-content">
+    
+    <!-- 00 Overview -->
+    <section class="cs-section" id="overview">
+      <h1 class="hero-title">SmartOpz</h1>
+      <h2 class="hero-subtitle">From a disorganized app to an organized, flexible platform.</h2>
+      
+      <p>I led the redesign of SmartOpz — an all-in-one HRMS — turning a rigid, hard-to-use internal tool into a configurable system any company can shape to fit how it actually works.</p>
+
+      <div class="cs-meta-grid">
+        <strong>Role</strong>
+        <span>Sole Product Designer & Project Owner, end-to-end</span>
+        
+        <strong>Type</strong>
+        <span>Client project — complete revamp of an existing internal tool</span>
+        
+        <strong>Status</strong>
+        <span>Live, in active use, currently iterating based on real usage feedback</span>
+        
+        <strong>Tools</strong>
+        <span>Figma Make, Claude Code, Codex, Antigravity</span>
+      </div>
+
+      <div class="stats-banner">
+        <div class="stats-item">
+          <strong>Live product</strong>
+          <span>In daily use by the client</span>
+        </div>
+        <div class="stats-item">
+          <strong>9 modules</strong>
+          <span>One unified system</span>
+        </div>
+        <div class="stats-item">
+          <strong>Solo design + PO</strong>
+          <span>Research to handover</span>
+        </div>
+        <div class="stats-item">
+          <strong>Weekly iteration</strong>
+          <span>Client call every week</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Context -->
+    <section class="cs-section cs-divider" id="context">
+      <h1 class="section-title"><span class="num">01</span> Business Context</h1>
+      <p>SmartOpz is an all-in-one HRMS — covering People, Requests, Time, Projects, Procurement, Assets, Money, Partners, and Documents. It was built for a client who needed one system to run HR, finance, and operations, without forcing their company into someone else's fixed process.</p>
+      <p>This is a complete revamp of an app the client already had, not a build from zero.</p>
+    </section>
+
+    <!-- 02 Challenge -->
+    <section class="cs-section cs-divider" id="challenge">
+      <h1 class="section-title"><span class="num">02</span> The Challenge</h1>
+      <p>Nothing about the existing app felt organized. There was no coherent flow, the struggle for people using it day to day was real, and the tool assumed every company runs HR the same way — when in practice, none of them do.</p>
+      
+      <div class="num-list">
+        <div class="num-list-item">
+          <div class="num-list-num">01</div>
+          <div class="num-list-content">
+            <h3>Organize</h3>
+            <p>Turn a disorganized app with no real flow into something people can actually use day to day.</p>
+          </div>
+        </div>
+        <div class="num-list-item">
+          <div class="num-list-num">02</div>
+          <div class="num-list-content">
+            <h3>Flex</h3>
+            <p>Let any company shape approvals, roles, and rules to fit how it actually works — not one fixed process.</p>
+          </div>
+        </div>
+        <div class="num-list-item">
+          <div class="num-list-num">03</div>
+          <div class="num-list-content">
+            <h3>Adopt</h3>
+            <p>Make sure a first-time user can get value immediately, without configuring anything first.</p>
+          </div>
+        </div>
+      </div>
+      
+      <p style="margin-top: 24px;">The client's own diagnosis was clear: the fix wasn't just tidying up screens, it was adding real flexibility — organized enough to use, configurable enough to fit anyone.</p>
+    </section>
+
+    <!-- 03 Approach -->
+    <section class="cs-section cs-divider" id="approach">
+      <h1 class="section-title"><span class="num">03</span> My Approach</h1>
+      <p>Four moves turned a disorganized tool into a governed, configurable system.</p>
+      
+      <div class="num-list approach">
+        <div class="num-list-item">
+          <div class="num-list-num">01</div>
+          <div class="num-list-content">
+            <h3>Learn the real domain</h3>
+            <p>Studied the existing app, talked to the client, and benchmarked competitors (Keka, Zoho People, Horilla, Rippling) — more on the domain research in Team Alignment.</p>
+          </div>
+        </div>
+        <div class="num-list-item">
+          <div class="num-list-num">02</div>
+          <div class="num-list-content">
+            <h3>Design the core pattern</h3>
+            <p>Built one repeating logic — request, then approval, then outcome — so a user who learns it once understands most of the product.</p>
+          </div>
+        </div>
+        <div class="num-list-item">
+          <div class="num-list-num">03</div>
+          <div class="num-list-content">
+            <h3>Build the configuration layer</h3>
+            <p>A Configuration Hub lets each company set its own roles, ticket types, approval chains, and rules, reshaping the product to fit them.</p>
+          </div>
+        </div>
+        <div class="num-list-item">
+          <div class="num-list-num">04</div>
+          <div class="num-list-content">
+            <h3>Ship defaults, not a blank slate</h3>
+            <p>Key ticket types shipped with working defaults, so a new user could use core features immediately — configuration stayed available, not required.</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 24px;">On top of the design work, I acted as project owner — coordinating across teams and keeping deliverables on time — and owned QA and client presentation after development.</p>
+    </section>
+
+    <!-- 04 Decisions -->
+    <section class="cs-section cs-divider" id="decisions">
+      <h1 class="section-title"><span class="num">04</span> Key Decisions</h1>
+      <p>The system worked because the trade-offs were deliberate.</p>
+
+      <table class="cs-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Decision</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color: var(--teal-dark); font-weight: 700;">01</td>
+            <td><strong>One repeating pattern</strong></td>
+            <td>Request → approval → outcome runs through every module. Learn it once, and most of the product reads itself.</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="padding:0; border:none;">
+              <div class="principle-box">
+                <strong>UX principle — Jakob's Law:</strong> People expect new tools to work like tools they already know. One repeating pattern across all nine modules means less to learn and less to remember.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="color: var(--teal-dark); font-weight: 700;">02</td>
+            <td><strong>A single Configuration Hub</strong></td>
+            <td>Roles, ticket types, approval chains, and rules live in one place that reshapes the whole product — not scattered toggles.</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="padding:0; border:none;">
+              <div class="principle-box">
+                <strong>UX principle — Flexibility & Efficiency of Use:</strong> A good system works for both new and advanced users. The Configuration Hub is the advanced-user side of that balance.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="color: var(--teal-dark); font-weight: 700;">03</td>
+            <td><strong>Guided wizards over dense forms</strong></td>
+            <td>Complex, multi-part tasks (leave, payroll, ticketing) are broken into short steps instead of one long form.</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="padding:0; border:none;">
+              <div class="principle-box">
+                <strong>UX principle — Hick's Law & Progressive Disclosure:</strong> More choices at once means slower decisions. Splitting a task into small steps, and showing options only when needed, keeps each screen light.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="color: var(--teal-dark); font-weight: 700;">04</td>
+            <td><strong>Defaults for the common case</strong></td>
+            <td>Leave Request defaults to Reporting Manager and HR as approvers — works out of the box for most companies, still editable.</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="padding:0; border:none;">
+              <div class="principle-box">
+                <strong>UX principle — Pareto Principle (80/20):</strong> Instead of asking every company to set up from zero, we built the default for the common case, and left room to edit for the rest.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="color: var(--teal-dark); font-weight: 700;">05</td>
+            <td><strong>CAPEX/OPEX classified by the right role</strong></td>
+            <td>Moved from the person raising the request to finance/inventory staff at the bill stage, who actually know the answer.</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="padding:0; border:none;">
+              <div class="principle-box">
+                <strong>UX principle — Error Prevention:</strong> A form is only as good as the person filling it in. Moving a decision to the person who actually knows the answer prevents bad data before it happens.
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 05 Screens -->
+    <section class="cs-section cs-divider" id="screens">
+      <h1 class="section-title"><span class="num">05</span> Figma Screens</h1>
+      <div class="placeholder-box">
+        Placeholder: screenshots and annotated flows will be placed here.
+      </div>
+    </section>
+
+    <!-- 06 System -->
+    <section class="cs-section cs-divider" id="system">
+      <h1 class="section-title"><span class="num">06</span> The System</h1>
+      <p>An employee doesn't take leave, they raise a Leave Request. No one buys a laptop, someone raises a Procurement Request. Once it's approved, the system turns it into the real outcome — leave gets deducted, a bill gets raised, an asset gets handed over.</p>
+      <p>This one pattern repeats across all nine modules, so learning it once helps a new user understand most of the product. The Configuration Hub sits underneath, reshaping how every module behaves per company.</p>
+    </section>
+
+    <!-- 07 Content Model -->
+    <section class="cs-section cs-divider" id="content">
+      <h1 class="section-title"><span class="num">07</span> Content Model</h1>
+      <p>At first, everything was fully configurable, with nothing set by default. Some flows didn't work at all until someone configured them — without a Leave Request ticket set up, the leave flow wouldn't run, which affected leave balances and timesheets too. Asset Request and Procurement Request had the same problem.</p>
+      <p>To fix this, key ticket types shipped with defaults, kept fully editable. A similar issue in Procurement — classifying a purchase as CAPEX or OPEX — was moved from the person raising the request to finance or inventory staff at the point the bill is raised, since they're the ones who actually know the difference.</p>
+      <p>We didn't get these right the first time. We noticed the problem in use, and fixed it from there.</p>
+    </section>
+
+    <!-- 08 Language -->
+    <section class="cs-section cs-divider" id="language">
+      <h1 class="section-title"><span class="num">08</span> Design Language</h1>
+      <p>Screens were built using Figma Make, with Claude Code, Codex, and Antigravity supporting the build.</p>
+      <div class="placeholder-box">
+        Placeholder: typography, color palette, and component library will be documented here once screenshots and the Figma file are added to this case study.
+      </div>
+    </section>
+
+    <!-- 09 Alignment -->
+    <section class="cs-section cs-divider" id="alignment">
+      <h1 class="section-title"><span class="num">09</span> Team Alignment</h1>
+      <p>Ticketing, CAPEX, and OPEX were new to me and the team, and the client's requirements weren't fully clear at the start. I went and learned it directly — talking to people who work with ticketing systems every day, and running sessions with a CA to understand how CAPEX and OPEX really work.</p>
+      <p>Not every client request is the right call, but not every one is wrong either. If a request had a real reason behind it, I built it. If it didn't, I explained the risk clearly and let the client decide.</p>
+      <p>The tools we used were core to how this was built. The hard part wasn't using them — it was explaining my thinking clearly enough that the output matched what I actually wanted, and staying sharp about checking and re-prompting instead of settling for whatever came out first.</p>
+    </section>
+
+    <!-- 10 Results -->
+    <section class="cs-section cs-divider" id="results">
+      <h1 class="section-title"><span class="num">10</span> Results</h1>
+      <p>SmartOpz is live and used daily inside the client's own company (not yet by their customers). The core workflows and unified system have generally worked well for people; some users still find configuration confusing, which we're actively working on.</p>
+      
+      <table class="results-table" style="margin-top: 24px; margin-bottom: 24px;">
+        <thead>
+          <tr>
+            <th class="before">Before</th>
+            <th class="arrow">→</th>
+            <th class="after">After</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Every ticket type fully configurable, nothing worked by default</td>
+            <td class="arrow-cell">→</td>
+            <td>Key ticket types ship with working defaults, fully editable</td>
+          </tr>
+          <tr>
+            <td>CAPEX/OPEX classified by whoever raised the request</td>
+            <td class="arrow-cell">→</td>
+            <td>Classified by finance/inventory staff who know the answer</td>
+          </tr>
+          <tr>
+            <td>No consistent pattern across modules</td>
+            <td class="arrow-cell">→</td>
+            <td>One request → approval → outcome pattern everywhere</td>
+          </tr>
+          <tr>
+            <td>Fixed process, same for every company</td>
+            <td class="arrow-cell">→</td>
+            <td>Configuration Hub adapts the system per company</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>We keep iterating based on this feedback. It's an ongoing process, not a finished product.</p>
+      <p style="font-size: 14px; font-style: italic; color: #6b7280;">Note: SmartOpz doesn't yet have a usage-analytics dashboard, so results here are qualitative — drawn from direct client feedback rather than measured funnel or adoption numbers.</p>
+    </section>
+
+    <!-- 11 Learned -->
+    <section class="cs-section cs-divider" id="learned">
+      <h1 class="section-title"><span class="num">11</span> What I Learned</h1>
+      
+      <div class="num-list approach">
+        <div class="num-list-item">
+          <div class="num-list-num">01</div>
+          <div class="num-list-content">
+            <h3>Design for many companies, not one client</h3>
+            <p>Every flow was checked against one question: would this work for a company that isn't ours?</p>
+          </div>
+        </div>
+        <div class="num-list-item">
+          <div class="num-list-num">02</div>
+          <div class="num-list-content">
+            <h3>Sketch before you commit</h3>
+            <p>For ticketing and CAPEX/OPEX, I sketched a few options and weighed trade-offs before picking one — rather than committing early and fixing it later. Even so, we missed some edge cases and had to work around technical limits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 Next -->
+    <section class="cs-section cs-divider" id="next">
+      <h1 class="section-title"><span class="num">12</span> Next Step</h1>
+      <p>We strive to give our best. I visit the app regularly and test flows at random, which often brings a new edge case to light. I'm also fortunate to have a client call every week, and together we keep finding ways to make the product better, every day. Whenever a new idea comes up, I reason through it carefully before we build it, so each change makes the product a little better than before. It's a continuous process, and one we genuinely enjoy being part of.</p>
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navItems = document.querySelectorAll('.nav-item');
+      const sections = document.querySelectorAll('.cs-section');
+      const contentArea = document.querySelector('.cs-content');
+
+      // Click to scroll
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const targetId = item.getAttribute('data-target');
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Update active nav based on scroll position
+      const observerOptions = {
+        root: contentArea,
+        rootMargin: '-20% 0px -60% 0px', 
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            
+            navItems.forEach(nav => {
+              nav.classList.remove('active');
+              if (nav.getAttribute('data-target') === id) {
+                nav.classList.add('active');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(sec => observer.observe(sec));
+    });
+  </script>
+</body>
+</html>

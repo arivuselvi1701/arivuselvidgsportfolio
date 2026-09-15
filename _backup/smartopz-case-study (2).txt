@@ -1,0 +1,75 @@
+SmartOpz
+Designing a Configurable HRMS for Any Company's Workflow
+Role:  Sole Product Designer & Project Owner, end-to-end
+Type:  Client project — complete revamp of an existing internal tool
+Status:  Live, in active use, currently iterating based on real usage feedback
+Tools:  Figma Make, Claude Code, Codex, Antigravity
+My Role
+I designed SmartOpz single-handedly, owning the full lifecycle rather than one slice of it:
+	•	Research — client conversations, competitor benchmarking, and domain expert input
+	•	Planning — structuring the information architecture and flows across all nine modules
+	•	Handover to developers — conveying designs and intent clearly enough for the team to build against
+	•	Post-development QA — testing the UX and UI once features were built, to catch gaps before the client saw them
+	•	Client presentation — presenting the work and rationale directly to the client
+On top of the design work, I also acted as project owner — coordinating across teams and making sure deliverables landed on time.
+The Problem
+The client already had an app in place — this wasn't a build from zero. But nothing about it felt organized: there was essentially no coherent flow, and the struggle for people actually using it day to day was real, not theoretical. Beyond the disorganization, the underlying tool was rigid — it assumed every company runs HR, approvals, procurement, and payroll the same way, when in practice every organization does it a little differently.
+The client's own diagnosis was clear: the fix wasn't just tidying up screens, it was adding real flexibility — a system organized enough to actually use, and configurable enough to fit any company's workflow rather than forcing one fixed process on everyone.
+Research & Discovery
+Before opening Figma, the groundwork was:
+	•	Analyzed the client's existing application to understand what was already working and what was actively causing friction
+	•	Direct conversations with the client to surface the real, day-to-day pain points — not just the assumed ones
+	•	Competitive research against established HRMS platforms (Keka, Zoho People, Horilla, Rippling) to benchmark navigation patterns and feature sets
+	•	Talked to people working directly in ticketing and CAPEX/OPEX workflows — domain experts whose day-to-day reality the tool had to match, especially around procurement and asset management
+	•	Used AI-assisted research to speed up pattern-gathering across comparable tools
+This wasn't a redesign done in isolation — it was built from what the people who'd actually use it deal with every day.
+The Core Design Insight
+One rule runs through all of SmartOpz: nothing happens directly — it's requested, then approved, then it becomes real.
+An employee doesn't take leave, they raise a Leave Request. No one buys a laptop, someone raises a Procurement Request. Once it's approved, the system turns it into the real outcome — leave gets deducted, a bill gets raised, an asset gets handed over.
+With nine modules — People, Requests, Time, Projects, Procurement, Assets, Money, Partners, Documents — this one pattern helps a new user learn the system faster. Learn it once, and most of the product makes sense.
+UX principle — Jakob's Law: People expect new tools to work like tools they already know. One repeating pattern across all nine modules means less to learn and less to remember.
+For flexibility, we built a Configuration Hub — one place where a company sets its roles, ticket types, approval chains, and rules. Change it there, and it changes the whole product. The goal was to let companies shape the system to fit them, not the other way around.
+UX principle — Flexibility & Efficiency of Use: A good system works for both new and advanced users. The Configuration Hub is the advanced-user side of that balance.
+The Hardest Problem: Configurability vs. Simplicity
+Flexibility can hurt usability. The more options a system has, the easier it is to overwhelm the user. Keeping workflows like leave, payroll, and ticketing simple — while staying flexible underneath — was the hardest part of this project.
+What helped: breaking big tasks into short, guided steps instead of one long form. It didn't solve everything, but it made these flows feel much easier.
+UX principle — Hick's Law & Progressive Disclosure: More choices at once means slower decisions. Splitting a task into small steps, and showing options only when needed, keeps each screen light.
+Challenges & How I Solved Them
+Designing for domains I didn't know yet
+Ticketing, CAPEX, and OPEX were new to me and the team. The client's requirements weren't fully clear either.
+What I did: went and learned it directly.
+	•	Talked to people who work with ticketing systems every day
+	•	Had sessions with a CA to understand how CAPEX and OPEX really work
+	•	Used that knowledge to design something the product could actually support, not a rough guess
+That research turned an unclear brief into something workable.
+Designing for every company, not one client
+SmartOpz had to work for many companies, not just this one. So every flow was checked against one question: would this work for a company that isn't ours?
+Knowing when to push back on the client
+Not every client request is the right call — but not every one is wrong either. If a request had a real reason behind it, I built it. If it didn't, I explained the risk clearly and let the client decide.
+Getting to the final flow
+For ticketing and CAPEX/OPEX, I didn't pick one flow right away. I sketched a few options, weighed the trade-offs, and picked the best one — rather than committing early and fixing it later.
+Even so, we missed some edge cases at first, and had to work around technical limits. Both modules were adjusted and shipped.
+Working with AI tools without letting them think for me
+Figma Make, Claude Code, Codex, and Antigravity were core to how this was built. The hard part wasn't using the tools — it was explaining my thinking clearly enough that the output matched what I actually wanted. It's easy to accept an AI's answer just because it looks finished, and miss something important. Staying sharp about checking and re-prompting was its own skill to build.
+Learning that full configurability blocked core flows
+At first, everything was fully configurable, with nothing set by default. This meant some flows didn't work at all until someone configured them. For example, without a Leave Request ticket set up, the leave flow wouldn't run — which affected leave balances and timesheets too. The same problem hit Asset Request and Procurement Request.
+To fix this, we set defaults for key ticket types, and kept them editable. A new user could now use the core features right away, with no setup needed. The Leave Request flow, for example, defaults to Reporting Manager and HR as approvers — a setup that fits most companies, but can be changed.
+UX principle — Pareto Principle (80/20): Instead of asking every company to set up from zero, we built the default for the common case, and left room to edit for the rest.
+A similar issue came up in Procurement. The plan was to classify a purchase as CAPEX or OPEX right when the request was raised — but the person raising it often doesn't know which one it is. So we moved that step to when the bill is raised and inventory details are filled in, which is usually done by finance or inventory staff who do know the difference.
+UX principle — Error Prevention: A form is only as good as the person filling it in. Moving a decision to the person who actually knows the answer prevents bad data before it happens.
+We didn't get these right the first time. We noticed the problem in use, and fixed it from there.
+Outcome
+SmartOpz is live and used daily inside the client's own company (not yet by their customers). Feedback so far:
+	•	Positive: the core workflows and unified system work well for people
+	•	Friction: some users still find configuration confusing — something we're actively working on
+We keep iterating based on this feedback. It's an ongoing process, not a finished product.
+Principles This Design Leaned On
+	•	Jakob's Law — one pattern (request → approval → outcome) across all modules
+	•	Flexibility & Efficiency of Use — a Configuration Hub for companies that need to adapt
+	•	Hick's Law & Progressive Disclosure — step-by-step wizards instead of dense forms
+	•	Pareto Principle (80/20) — defaults for the common case, edits for the rest
+	•	Error Prevention — decisions routed to the person who has the knowledge to make them
+These weren't a checklist we followed from day one — they're the patterns that explain, in hindsight, why the fixes worked.
+Still Learning From This Product
+We strive to give the best. I visit the app regularly and test some flows randomly, and a new edge case comes to mind. Luckily, I have a client call every week, and we are still in the process of making the product better every day. I go with the reasoning for my new ideas, think it through, and then we work on it and make it better. We are still in the process of making it even better.
+[ Screenshots and annotated flows to be added ]
