@@ -48,7 +48,8 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Hamburger Icon */}
-        <div className="md:hidden flex items-center justify-end w-full">
+        <div className="md:hidden flex items-center justify-between w-full">
+          <a href="#home" className="text-white font-serif text-xl tracking-wide font-bold">Arivuselvi</a>
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-white hover:text-white/70 transition-colors p-2"
