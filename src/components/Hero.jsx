@@ -44,7 +44,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden flex flex-col justify-end md:justify-between pt-32 pb-12 px-8 md:px-16 text-white selection:bg-white selection:text-black">
+    <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden flex flex-col justify-center md:justify-between py-12 md:pt-32 px-8 md:px-16 text-white selection:bg-white selection:text-black">
       
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
       {/* Top Massive Title - Particle Hover Effect */}
-      <div className="relative z-10 w-full h-[120px] md:h-[400px] flex justify-center mt-auto md:-mt-20 mb-6 md:mb-0">
+      <div className="relative z-10 w-full h-[120px] md:h-[400px] flex justify-center md:-mt-20 mb-6 md:mb-0">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
