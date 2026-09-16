@@ -93,10 +93,10 @@ export default function Work() {
                   />
                 )}
                 
-                {/* Hover View More Button */}
+                {/* Hover View Button */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-colors duration-500">
                   <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 border border-white/40 px-6 py-3 text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-white backdrop-blur-sm">
-                    View More
+                    View
                   </span>
                 </div>
               </div>
@@ -146,10 +146,10 @@ export default function Work() {
                   />
                 )}
                 
-                {/* Hover View More Button */}
+                {/* Hover View Button */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-colors duration-500">
                   <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 border border-white/40 px-6 py-3 text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-white backdrop-blur-sm">
-                    View More
+                    View
                   </span>
                 </div>
               </div>
