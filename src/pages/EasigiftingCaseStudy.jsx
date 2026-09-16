@@ -112,13 +112,14 @@ export default function EasigiftingCaseStudy() {
             <h3 className="font-serif text-lg uppercase tracking-widest text-white/60 mb-6">Contents</h3>
             <ul className="space-y-6 border-l border-white/10 pl-6 relative">
               {sections.map((section, idx) => (
-                <li key={section.id}>
+                <li key={section.id} className="relative flex items-center">
+
+                    <span className={`absolute -left-[28.5px] top-1/2 -translate-y-1/2 w-[9px] h-[9px] rounded-full transition-all duration-300 ${ activeSection === section.id ? 'bg-[#151515] shadow-[0_0_10px_rgba(255,255,255,0.8)] scale-110' : 'bg-[#151515]/20' }`}></span>
+
                   <button 
                     onClick={() => scrollToSection(section.id)}
                     className={`text-lg text-left transition-all duration-300 w-full hover:text-white flex items-center ${activeSection === section.id ? 'text-white font-bold translate-x-2' : 'text-white/50 font-medium'}`}
-                  >
-                    <span className={`absolute -left-[4.5px] w-[9px] h-[9px] rounded-full transition-all duration-300 ${activeSection === section.id ? 'bg-[#151515] shadow-[0_0_10px_rgba(255,255,255,0.8)] scale-110' : 'bg-[#151515]/20'}`}></span>
-                    <span className={`mr-4 text-xs font-mono tracking-wider transition-all duration-300 ${activeSection === section.id ? 'text-white opacity-100' : 'text-white/40'}`}>
+                  >                    <span className={`mr-4 text-xs font-mono tracking-wider transition-all duration-300 ${activeSection === section.id ? 'text-white opacity-100' : 'text-white/40'}`}>
                       {(idx + 1).toString().padStart(2, '0')}
                     </span>
                     {section.title}
