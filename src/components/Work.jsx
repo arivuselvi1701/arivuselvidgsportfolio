@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const projects = [
   {
     title: 'SmartOpz',
-    desc: 'Designing a Configurable HRMS for Any Company\'s Workflow.',
+    desc: 'Configurable Enterprise application for any company\'s workflow',
     year: '2026',
     image: '/socover.jpg',
     link: '/work/smartopz',
