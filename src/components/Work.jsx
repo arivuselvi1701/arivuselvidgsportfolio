@@ -84,7 +84,7 @@ export default function Work() {
                   <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-[280px] leading-relaxed">
+                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-lg leading-relaxed">
                     {project.desc}
                   </p>
                 </div>
@@ -137,7 +137,7 @@ export default function Work() {
                   <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-[280px] leading-relaxed">
+                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-lg leading-relaxed">
                     {project.desc}
                   </p>
                 </div>
