@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
       {/* Top Massive Title - Particle Hover Effect */}
-      <div className="relative z-10 w-full h-[300px] flex justify-center -mt-12 md:-mt-20">
+      <div className="relative z-10 w-full h-[400px] flex justify-center -mt-12 md:-mt-20">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

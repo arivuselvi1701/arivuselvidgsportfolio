@@ -80,7 +80,7 @@ const ParticleText = ({ text }) => {
       particlesArray = [];
       
       // Exact calculation of clamp(4rem, 14vw, 14rem) based on 16px rem
-      const fontSize = Math.max(64, Math.min(window.innerWidth * 0.14, 224));
+      const fontSize = Math.max(90, Math.min(window.innerWidth * 0.20, 300));
       
       ctx.fillStyle = 'white';
       ctx.font = `800 ${fontSize}px "Cormorant Garamond", serif`;
