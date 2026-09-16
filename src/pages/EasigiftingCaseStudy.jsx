@@ -7,7 +7,6 @@ const sections = [
   { id: 'my-approach', title: 'My Approach' },
   { id: 'understanding-the-experience', title: 'Understanding The Experience' },
   { id: 'key-decisions', title: 'Key Decisions' },
-  { id: 'design-language', title: 'Design Language' },
   { id: 'outcome', title: 'Outcome' },
   { id: 'what-i-learned', title: 'What I Learned' }
 ];
@@ -304,52 +303,9 @@ export default function EasigiftingCaseStudy() {
             </div>
           </section>
 
-          <section id="design-language" className="scroll-mt-32">
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-white mb-5 pb-4 flex items-center">
-              <span className="text-white opacity-80 mr-4 text-2xl font-mono tracking-widest">05</span> Design language
-            </h2>
-            <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
-              <p className="font-serif text-xl">Calm for the system. Warm for the moment.</p>
-              <p>The visual language was designed around the different roles of the experience.</p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                <motion.div 
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-[#151515] p-6 rounded-xl border border-white/10 border-t-4 border-t-[#4169E1] shadow-sm hover:shadow-lg transition-shadow cursor-default"
-                >
-                  <h4 className="font-bold mb-2 flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-[#4169E1]"></span> Royal Blue</h4>
-                  <p className="text-sm text-white/60">Used for primary actions and functional areas to create a sense of trust and stability.</p>
-                </motion.div>
-                <motion.div 
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-[#151515] p-6 rounded-xl border border-white/10 border-t-4 border-t-[#708090] shadow-sm hover:shadow-lg transition-shadow cursor-default"
-                >
-                  <h4 className="font-bold mb-2 flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-[#708090]"></span> Slate + White</h4>
-                  <p className="text-sm text-white/60">Used as the foundation to keep information clear and structured.</p>
-                </motion.div>
-                <motion.div 
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-[#151515] p-6 rounded-xl border border-white/10 border-t-4 border-t-[#50C878] shadow-sm hover:shadow-lg transition-shadow cursor-default"
-                >
-                  <h4 className="font-bold mb-2 flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-[#50C878]"></span> Emerald</h4>
-                  <p className="text-sm text-white/60">Used for successful states such as funded, delivered, and claimed.</p>
-                </motion.div>
-                <motion.div 
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-[#151515] p-6 rounded-xl border border-white/10 border-t-4 border-t-[#8A2BE2] shadow-sm hover:shadow-lg transition-shadow cursor-default"
-                >
-                  <h4 className="font-bold mb-2 flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-[#8A2BE2]"></span> Violet</h4>
-                  <p className="text-sm text-white/60">Reserved for the recipient reveal to create a distinct emotional moment.</p>
-                </motion.div>
-              </div>
-              <p className="mt-6">The intention wasn't to make the entire product decorative. It was to create a clear visual distinction between <strong>using the system</strong> and <strong>receiving the gift</strong>.</p>
-              
-            </div>
-          </section>
-
           <section id="outcome" className="scroll-mt-32">
             <h2 className="font-serif text-3xl md:text-4xl font-medium text-white mb-5 pb-4 flex items-center">
-              <span className="text-white opacity-80 mr-4 text-2xl font-mono tracking-widest">06</span> Outcome
+              <span className="text-white opacity-80 mr-4 text-2xl font-mono tracking-widest">05</span> Outcome
             </h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>The final experience brought together two requirements that initially seemed to compete: <strong>Operational efficiency for the sender</strong> and <strong>Emotional ownership for the recipient</strong>.</p>
@@ -367,7 +323,7 @@ export default function EasigiftingCaseStudy() {
 
           <section id="what-i-learned" className="scroll-mt-32">
             <h2 className="font-serif text-3xl md:text-4xl font-medium text-white mb-5 pb-4 flex items-center">
-              <span className="text-white opacity-80 mr-4 text-2xl font-mono tracking-widest">07</span> What I Learned
+              <span className="text-white opacity-80 mr-4 text-2xl font-mono tracking-widest">06</span> What I Learned
             </h2>
             <div className="space-y-8 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               
