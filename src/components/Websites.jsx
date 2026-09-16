@@ -72,12 +72,12 @@ const Card = ({ i, title, description, image, video, gallery, color, progress, r
             top: `calc(-5vh + ${i * 30}px)`,
             backgroundColor: color
           }} 
-          className="flex flex-col md:flex-row relative w-full max-w-5xl h-[600px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.1)] origin-top border border-black/5"
+          className="flex flex-col md:flex-row relative w-full max-w-5xl h-[700px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.1)] origin-top border border-black/5"
         >
           {/* Content Side */}
-          <div className="w-full md:w-5/12 h-1/2 md:h-full p-10 md:p-14 flex flex-col items-center md:items-start text-center md:text-left justify-center bg-white text-ink relative z-10">
+          <div className="w-full md:w-5/12 h-1/2 md:h-full p-8 md:p-14 flex flex-col items-center md:items-start text-center md:text-left justify-center bg-white text-ink relative z-10">
             <div className="text-xs font-semibold tracking-[0.2em] uppercase text-ink/50 mb-6">Figma Design</div>
-            <h3 className="font-serif text-3xl md:text-4xl font-medium mb-6 leading-tight">{title}</h3>
+            <h3 className="font-serif text-3xl md:text-4xl font-medium mb-4 md:mb-6 leading-tight">{title}</h3>
             <p className="text-ink/80 text-base leading-relaxed">{description}</p>
             
             {externalLink ? (
