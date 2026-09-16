@@ -41,7 +41,7 @@ export default function Work() {
   return (
     <div id="works" className="bg-[#151212] flex flex-col">
       {/* Intro section for works */}
-      <div className="py-32 px-6 md:px-12 text-center text-white">
+      <div className="pt-32 pb-8 px-6 md:px-12 text-center text-white">
         <h2 className="font-serif text-[clamp(3rem,8vw,6rem)] leading-none tracking-tight text-white mb-4">
           Selected Works.
         </h2>
