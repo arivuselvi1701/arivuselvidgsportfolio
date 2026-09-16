@@ -72,7 +72,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom Content Area */}
-      <div className="relative z-10 w-full flex flex-col md:flex-row items-end justify-between gap-8 mb-4">
+      <div className="relative z-10 w-full flex flex-col md:flex-row items-center md:items-end justify-between gap-8 mb-4">
         
         {/* Bottom Left: Role & Details */}
         <motion.div 
