@@ -54,7 +54,7 @@ export default function Hero() {
           className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-black/10 mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}></div>
-        <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 pointer-events-none"></div>
       </div>
 
