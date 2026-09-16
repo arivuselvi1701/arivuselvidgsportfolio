@@ -100,7 +100,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="flex w-full md:w-[380px] bg-[#1a1515]/80 backdrop-blur-md border border-white/5 p-8 flex-col"
+          className="hidden md:flex w-full md:w-[380px] bg-[#1a1515]/80 backdrop-blur-md border border-white/5 p-8 flex-col"
         >
           <div className="flex justify-between items-center mb-8 border-b border-white/10 pb-4">
             <div className="flex gap-4">
