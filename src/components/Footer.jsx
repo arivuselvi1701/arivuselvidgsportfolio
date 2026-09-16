@@ -47,7 +47,7 @@ export function CTA() {
         <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 w-full text-left md:text-center border-t border-cream/10 pt-12">
           <div>
             <div className="text-cream/40 text-xs uppercase tracking-widest mb-2">Location</div>
-            <div className="font-serif text-xl">India (Remote)</div>
+            <div className="font-serif text-xl">India</div>
           </div>
           <div>
             <div className="text-cream/40 text-xs uppercase tracking-widest mb-2">Focus</div>
