@@ -124,11 +124,21 @@ const ParticleText = ({ text }) => {
       animate();
     });
 
-    const handleMouseMove = (e) => {
+        const handleMouseMove = (e) => {
       const dpr = window.devicePixelRatio || 1;
       const rect = canvas.getBoundingClientRect();
       mouse.x = (e.clientX - rect.left) * dpr;
       mouse.y = (e.clientY - rect.top) * dpr;
+      mouse.radius = 80 * dpr;
+    };
+
+    const handleTouchMove = (e) => {
+      e.preventDefault();
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      const touch = e.touches[0];
+      mouse.x = (touch.clientX - rect.left) * dpr;
+      mouse.y = (touch.clientY - rect.top) * dpr;
       mouse.radius = 80 * dpr;
     };
 
@@ -143,12 +153,18 @@ const ParticleText = ({ text }) => {
 
     canvas.addEventListener('mousemove', handleMouseMove);
     canvas.addEventListener('mouseleave', handleMouseLeave);
+    canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
+    canvas.addEventListener('touchend', handleMouseLeave);
+    canvas.addEventListener('touchstart', handleTouchMove, { passive: false });
     window.addEventListener('resize', handleResize);
 
     return () => {
       cancelAnimationFrame(animationFrameId);
       canvas.removeEventListener('mousemove', handleMouseMove);
       canvas.removeEventListener('mouseleave', handleMouseLeave);
+      canvas.removeEventListener('touchmove', handleTouchMove);
+      canvas.removeEventListener('touchend', handleMouseLeave);
+      canvas.removeEventListener('touchstart', handleTouchMove);
       window.removeEventListener('resize', handleResize);
     };
   }, [text]);

@@ -68,7 +68,13 @@ export default function Work() {
           </div>
 
           {project.isInternal ? (
-            <Link 
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Link 
               to={project.link} 
               className="relative z-10 group flex flex-col w-[85vw] md:w-[450px] md:hover:w-[900px] transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
             >
@@ -111,8 +117,15 @@ export default function Work() {
                 </div>
               </div>
             </Link>
+            </motion.div>
           ) : (
-            <a 
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <a 
               href={project.link} 
               target="_blank" 
               rel="noreferrer"
@@ -157,6 +170,7 @@ export default function Work() {
                 </div>
               </div>
             </a>
+            </motion.div>
           )}
 
         </section>
