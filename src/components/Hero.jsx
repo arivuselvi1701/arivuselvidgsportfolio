@@ -81,7 +81,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center md:items-start text-center md:text-left"
         >
-          <h2 className="font-serif text-4xl md:text-6xl font-medium tracking-tight mb-6" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
+          <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight mb-6" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
             Product Designer
           </h2>
           <div className="flex flex-col items-center md:items-start text-[11px] md:text-xs font-semibold tracking-[0.15em] leading-relaxed text-white/80 uppercase">
