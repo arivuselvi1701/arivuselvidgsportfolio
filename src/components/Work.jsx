@@ -78,6 +78,21 @@ export default function Work() {
               to={project.link} 
               className="relative z-10 group flex flex-col w-[85vw] md:w-[450px] md:hover:w-[900px] transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
             >
+              {/* Text Content */}
+              <div className="flex flex-col md:flex-row justify-between items-start mb-6 w-full text-white gap-4 md:gap-0">
+                <div>
+                  <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-[280px] leading-relaxed">
+                    {project.desc}
+                  </p>
+                </div>
+                <div className="text-white/40 text-xs font-mono tracking-widest uppercase flex items-center gap-4">
+                  <span className="w-8 h-[1px] bg-white/20"></span>
+                  {project.year}
+                </div>
+              </div>
               {/* Image Wrapper */}
               <div className="relative w-full h-[50vh] md:h-[550px] overflow-hidden bg-[#222]">
                 <img 
@@ -96,26 +111,11 @@ export default function Work() {
                 {/* Hover View Button */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-colors duration-500">
                   <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 border border-white/40 px-6 py-3 text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-white backdrop-blur-sm">
-                    View
+                    View Project
                   </span>
                 </div>
               </div>
 
-              {/* Text Content */}
-              <div className="flex flex-col md:flex-row justify-between items-start mt-6 w-full text-white gap-4 md:gap-0">
-                <div>
-                  <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-[280px] leading-relaxed">
-                    {project.desc}
-                  </p>
-                </div>
-                <div className="text-white/40 text-xs font-mono tracking-widest uppercase flex items-center gap-4">
-                  <span className="w-8 h-[1px] bg-white/20"></span>
-                  {project.year}
-                </div>
-              </div>
             </Link>
             </motion.div>
           ) : (
@@ -131,6 +131,21 @@ export default function Work() {
               rel="noreferrer"
               className="relative z-10 group flex flex-col w-[85vw] md:w-[450px] md:hover:w-[900px] transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
             >
+              {/* Text Content */}
+              <div className="flex flex-col md:flex-row justify-between items-start mb-6 w-full text-white gap-4 md:gap-0">
+                <div>
+                  <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-[280px] leading-relaxed">
+                    {project.desc}
+                  </p>
+                </div>
+                <div className="text-white/40 text-xs font-mono tracking-widest uppercase flex items-center gap-4">
+                  <span className="w-8 h-[1px] bg-white/20"></span>
+                  {project.year}
+                </div>
+              </div>
               {/* Image Wrapper */}
               <div className="relative w-full h-[50vh] md:h-[550px] overflow-hidden bg-[#222]">
                 <img 
@@ -149,26 +164,11 @@ export default function Work() {
                 {/* Hover View Button */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-colors duration-500">
                   <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 border border-white/40 px-6 py-3 text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-white backdrop-blur-sm">
-                    View
+                    View Project
                   </span>
                 </div>
               </div>
 
-              {/* Text Content */}
-              <div className="flex flex-col md:flex-row justify-between items-start mt-6 w-full text-white gap-4 md:gap-0">
-                <div>
-                  <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-[280px] leading-relaxed">
-                    {project.desc}
-                  </p>
-                </div>
-                <div className="text-white/40 text-xs font-mono tracking-widest uppercase flex items-center gap-4">
-                  <span className="w-8 h-[1px] bg-white/20"></span>
-                  {project.year}
-                </div>
-              </div>
             </a>
             </motion.div>
           )}
