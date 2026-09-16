@@ -84,15 +84,16 @@ const ParticleText = ({ text }) => {
 
       particlesArray = [];
       
-            let fontSize = 180 * dpr;
+      let fontSize = 180 * dpr;
       ctx.font = `800 ${fontSize}px "Cormorant Garamond", serif`;
       
-      // Iteratively shrink font size until it fits within 95% of the canvas width
-      while (ctx.measureText(text).width > canvas.width * 0.70 && fontSize > 10 * dpr) {
+      const maxWidthPercentage = window.innerWidth < 768 ? 0.95 : 0.70;
+      
+      // Iteratively shrink font size until it fits within the allowed canvas width
+      while (ctx.measureText(text).width > canvas.width * maxWidthPercentage && fontSize > 10 * dpr) {
         fontSize -= 2 * dpr;
         ctx.font = `800 ${fontSize}px "Cormorant Garamond", serif`;
       }
-      
       ctx.fillStyle = 'white';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
