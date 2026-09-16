@@ -25,7 +25,7 @@ export default function Navbar() {
       transition={{ duration: 1, delay: 0.2 }}
       className={`fixed top-0 left-0 right-0 z-[100] py-6 transition-all duration-300 ${
         scrolled 
-          ? 'bg-[#151515]/95 backdrop-blur-md shadow-lg border-b border-white/5' 
+          ? 'bg-[#151515]/95 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
       }`}
     >
