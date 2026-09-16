@@ -41,7 +41,7 @@ export default function Work() {
   return (
     <div id="works" className="bg-[#151212] flex flex-col">
       {/* Intro section for works */}
-      <div className="pt-32 pb-8 px-6 md:px-12 text-center text-white">
+      <div className="pt-32 pb-0 px-6 md:px-12 text-center text-white">
         <h2 className="font-serif text-[clamp(3rem,8vw,6rem)] leading-none tracking-tight text-white mb-4">
           Selected Works.
         </h2>
@@ -53,7 +53,7 @@ export default function Work() {
       {projects.map((project, index) => (
         <section 
           key={project.title} 
-          className="relative min-h-screen py-16 md:py-24 w-full flex items-center justify-center overflow-hidden border-b border-white/5"
+          className="relative py-12 md:py-32 w-full flex items-center justify-center overflow-hidden border-b border-white/5"
         >
           {/* Massive Background Text Parallax/Scroll effect */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
