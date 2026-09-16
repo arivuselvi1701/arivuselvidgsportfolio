@@ -70,11 +70,11 @@ export function CTA() {
 export function Footer() {
   return (
     <footer id="contact" className="bg-cream pt-20 pb-10 px-6 md:px-12 border-t border-line">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto text-center md:text-left">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-5">
             <a href="#" className="font-serif text-3xl font-bold tracking-tight text-ink mb-6 block">ARIVU.</a>
-            <p className="text-muted text-sm max-w-xs mb-8">
+            <p className="text-muted text-sm max-w-xs mx-auto md:mx-0 mb-8">
               A creative design studio focused on building digital experiences with purpose and precision.
             </p>
             
