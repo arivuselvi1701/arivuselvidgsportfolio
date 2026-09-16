@@ -44,7 +44,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden flex flex-col justify-between pt-32 pb-12 px-8 md:px-16 text-white selection:bg-white selection:text-black">
+    <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden flex flex-col justify-end md:justify-between pt-32 pb-12 px-8 md:px-16 text-white selection:bg-white selection:text-black">
       
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
       {/* Top Massive Title - Particle Hover Effect */}
-      <div className="relative z-10 w-full h-[400px] flex justify-center -mt-12 md:-mt-20">
+      <div className="relative z-10 w-full h-[120px] md:h-[400px] flex justify-center mt-auto md:-mt-20 mb-6 md:mb-0">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center md:items-start text-center md:text-left"
         >
-          <h2 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
+          <h2 className="font-serif text-4xl md:text-6xl font-medium tracking-tight mb-6" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
             Product Designer
           </h2>
           <div className="flex flex-col items-center md:items-start text-[11px] md:text-xs font-semibold tracking-[0.15em] leading-relaxed text-white/80 uppercase">
