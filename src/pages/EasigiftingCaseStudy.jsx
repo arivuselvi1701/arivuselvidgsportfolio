@@ -253,6 +253,9 @@ export default function EasigiftingCaseStudy() {
                   "Don't ask the sender to do more. Make the existing actions more meaningful."
                 </blockquote>
                 <p>This allowed the experience to remain lightweight while still creating a more curated outcome.</p>
+                <div className="mt-8">
+                  <img src="/eg1.jpg" alt="Personalization without adding another step" className="w-full h-auto rounded-xl border border-white/10" />
+                </div>
               </div>
 
               <div>
@@ -261,6 +264,9 @@ export default function EasigiftingCaseStudy() {
                 <p className="mt-4">So I moved accuracy into a dedicated approval stage:</p>
                 <p className="font-mono text-sm my-4 bg-[#151515] p-4 rounded-lg border border-white/10">Sender creates → Approver reviews → Approve / Request changes → Sender revises → Gift is sent</p>
                 <p>If changes were requested, the sender could revise the existing gift instead of starting over. Comments remained attached to the gift so context wasn't lost.</p>
+                <div className="mt-8">
+                  <img src="/eg2.jpg" alt="Separating creation from approval" className="w-full h-auto rounded-xl border border-white/10" />
+                </div>
               </div>
 
               <div>
@@ -268,6 +274,9 @@ export default function EasigiftingCaseStudy() {
                 <p>After a gift was sent, the sender shouldn't have to wonder what happened. Instead of treating everything after "Send" as one state, I separated the journey into:</p>
                 <p className="font-mono text-sm my-4 bg-[#151515] p-4 rounded-lg border border-white/10">Sent → Delivered → Viewed → Claimed</p>
                 <p>This gave the sender visibility into what was happening after they completed the action.</p>
+                <div className="mt-8">
+                  <img src="/eg3.jpg" alt="Making the invisible journey visible" className="w-full h-auto rounded-xl border border-white/10" />
+                </div>
               </div>
 
               <div>
@@ -275,6 +284,9 @@ export default function EasigiftingCaseStudy() {
                 <p>A sender may not always know which brand the recipient actually prefers. Rather than making swapping feel like a secondary or corrective action, I gave both choices equal importance:</p>
                 <p className="font-bold text-lg my-4 text-center">Claim &nbsp;|&nbsp; Swap</p>
                 <p>This shifted the experience from simply receiving an assigned gift to having control over how the gift is used.</p>
+                <div className="mt-8">
+                  <img src="/eg4.jpg" alt="Giving the recipient control" className="w-full h-auto rounded-xl border border-white/10" />
+                </div>
               </div>
 
               <div>
@@ -283,6 +295,11 @@ export default function EasigiftingCaseStudy() {
                 <blockquote className="border-l-4 border-white/30 pl-6 my-6 italic text-lg text-white/70">
                   "When the sender can't know the perfect choice, give the recipient the choice."
                 </blockquote>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                  <img src="/eg5.jpg" alt="Designing for flexible gifting" className="w-full h-auto rounded-xl border border-white/10" />
+                  <img src="/eg5a.jpg" alt="Designing for flexible gifting" className="w-full h-auto rounded-xl border border-white/10" />
+                  <img src="/eg5b.jpg" alt="Designing for flexible gifting" className="w-full h-auto rounded-xl border border-white/10" />
+                </div>
               </div>
 
               <div>
@@ -290,6 +307,9 @@ export default function EasigiftingCaseStudy() {
                 <p>Rather than recreating gift-card catalog and redemption infrastructure, I worked around the existing <strong>Prezee</strong> integration. This allowed the design effort to focus on the parts that were unique to the EasiGifting experience:</p>
                 <p className="font-mono text-sm my-4 bg-[#151515] p-4 rounded-lg border border-white/10">Creation → Approval → Tracking → Reveal → Claim / Swap</p>
                 <p>The focus was on creating a seamless experience around the existing infrastructure rather than rebuilding what already worked.</p>
+                <div className="mt-8">
+                  <img src="/eg6.jpg" alt="Designing around existing infrastructure" className="w-full h-auto rounded-xl border border-white/10" />
+                </div>
               </div>
 
               <div>
@@ -299,6 +319,10 @@ export default function EasigiftingCaseStudy() {
                 <blockquote className="border-l-4 border-white/30 pl-6 my-6 italic text-lg text-white/70">
                   "Functional when it needs to be. Emotional when it matters."
                 </blockquote>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                  <img src="/eg7.jpg" alt="Creating an emotional moment" className="w-full h-auto rounded-xl border border-white/10" />
+                  <img src="/eg7a.jpg" alt="Creating an emotional moment" className="w-full h-auto rounded-xl border border-white/10" />
+                </div>
               </div>
             </div>
           </section>
