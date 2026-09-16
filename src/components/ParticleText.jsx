@@ -14,13 +14,14 @@ const ParticleText = ({ text }) => {
     let animationFrameId;
 
     class Particle {
-      constructor(x, y) {
+      constructor(x, y, dpr = 1) {
         this.x = x;
         this.y = y;
-        this.size = 1.2; // Fine particle size
+        this.size = 1.2 * dpr;
         this.baseX = this.x;
         this.baseY = this.y;
-        this.density = (Math.random() * 20) + 1; // Used for speed of repulsion
+        this.density = (Math.random() * 20) + 1;
+        this.dpr = dpr;
       }
       
       draw() {
@@ -73,34 +74,36 @@ const ParticleText = ({ text }) => {
     }
 
     const init = () => {
-      // Fit canvas to parent container
-      canvas.width = canvas.parentElement.clientWidth;
-      canvas.height = canvas.parentElement.clientHeight;
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.parentElement.getBoundingClientRect();
+      
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      canvas.style.width = `${rect.width}px`;
+      canvas.style.height = `${rect.height}px`;
 
       particlesArray = [];
       
-      // Exact calculation of clamp(4rem, 14vw, 14rem) based on 16px rem
-      const fontSize = Math.max(90, Math.min(window.innerWidth * 0.20, 300));
+      const fontSize = Math.max(90, Math.min(rect.width * 0.20, 300)) * dpr;
       
       ctx.fillStyle = 'white';
       ctx.font = `800 ${fontSize}px "Cormorant Garamond", serif`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       
-      // Draw text exactly in the center of the canvas container
       ctx.fillText(text, canvas.width / 2, canvas.height / 2);
 
-      // Scan the canvas for pixels
       const textCoordinates = ctx.getImageData(0, 0, canvas.width, canvas.height);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Create particles from pixel data (sampling every 4th pixel for performance/density)
-      for (let y = 0, y2 = textCoordinates.height; y < y2; y += 3) {
-        for (let x = 0, x2 = textCoordinates.width; x < x2; x += 3) {
+      // Adjust sample rate based on DPR to maintain density
+      const sampleRate = Math.max(3, Math.floor(3 * dpr));
+
+      for (let y = 0, y2 = textCoordinates.height; y < y2; y += sampleRate) {
+        for (let x = 0, x2 = textCoordinates.width; x < x2; x += sampleRate) {
           if (textCoordinates.data[(y * 4 * textCoordinates.width) + (x * 4) + 3] > 128) {
-            let positionX = x;
-            let positionY = y;
-            particlesArray.push(new Particle(positionX, positionY));
+            // Store particles in physical coordinates
+            particlesArray.push(new Particle(x, y, dpr));
           }
         }
       }
@@ -116,15 +119,17 @@ const ParticleText = ({ text }) => {
     };
 
     // Ensure fonts are loaded before drawing text on canvas
-    document.fonts.ready.then(() => {
+    document.fonts.load('800 10px "Cormorant Garamond"').then(() => {
       init();
       animate();
     });
 
     const handleMouseMove = (e) => {
+      const dpr = window.devicePixelRatio || 1;
       const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
+      mouse.x = (e.clientX - rect.left) * dpr;
+      mouse.y = (e.clientY - rect.top) * dpr;
+      mouse.radius = 80 * dpr;
     };
 
     const handleMouseLeave = () => {
