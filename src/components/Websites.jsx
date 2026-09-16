@@ -75,23 +75,23 @@ const Card = ({ i, title, description, image, video, gallery, color, progress, r
           className="flex flex-col md:flex-row relative w-full max-w-5xl h-[600px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.1)] origin-top border border-black/5"
         >
           {/* Content Side */}
-          <div className="w-full md:w-5/12 h-1/2 md:h-full p-10 md:p-14 flex flex-col justify-center bg-white text-ink relative z-10">
+          <div className="w-full md:w-5/12 h-1/2 md:h-full p-10 md:p-14 flex flex-col items-center md:items-start text-center md:text-left justify-center bg-white text-ink relative z-10">
             <div className="text-xs font-semibold tracking-[0.2em] uppercase text-ink/50 mb-6">Figma Design</div>
             <h3 className="font-serif text-3xl md:text-4xl font-medium mb-6 leading-tight">{title}</h3>
             <p className="text-ink/80 text-base leading-relaxed">{description}</p>
             
             {externalLink ? (
-              <a href={externalLink} target="_blank" rel="noopener noreferrer" className="mt-auto md:mt-10 self-start group flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors hover:text-accent-dark">
+              <a href={externalLink} target="_blank" rel="noopener noreferrer" className="mt-6 md:mt-10 self-center md:self-start group flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors hover:text-accent-dark">
                 <span className="w-8 h-[1px] bg-ink group-hover:bg-accent-dark transition-colors"></span>
                 View Design
               </a>
             ) : link ? (
-              <Link to={link} className="mt-auto md:mt-10 self-start group flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors hover:text-accent-dark">
+              <Link to={link} className="mt-6 md:mt-10 self-center md:self-start group flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors hover:text-accent-dark">
                 <span className="w-8 h-[1px] bg-ink group-hover:bg-accent-dark transition-colors"></span>
                 View Design
               </Link>
             ) : (
-              <button onClick={() => setIsModalOpen(true)} className="mt-auto md:mt-10 self-start group flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors hover:text-accent-dark">
+              <button onClick={() => setIsModalOpen(true)} className="mt-6 md:mt-10 self-center md:self-start group flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors hover:text-accent-dark">
                 <span className="w-8 h-[1px] bg-ink group-hover:bg-accent-dark transition-colors"></span>
                 View Design
               </button>

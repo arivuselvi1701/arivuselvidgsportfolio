@@ -53,7 +53,7 @@ export default function Work() {
       {projects.map((project, index) => (
         <section 
           key={project.title} 
-          className="relative py-12 md:py-32 w-full flex items-center justify-center overflow-hidden border-b border-white/5"
+          className="relative pt-6 pb-12 md:py-32 w-full flex items-center justify-center overflow-hidden border-b border-white/5"
         >
           {/* Massive Background Text Parallax/Scroll effect */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
