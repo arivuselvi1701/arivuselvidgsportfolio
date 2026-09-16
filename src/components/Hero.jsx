@@ -44,7 +44,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden flex flex-col justify-center md:justify-between py-12 md:pt-32 px-8 md:px-16 text-white selection:bg-white selection:text-black">
+    <section id="home" className="relative min-h-[100svh] w-full overflow-hidden flex flex-col justify-center md:justify-between py-12 md:pt-32 md:pb-16 px-8 md:px-16 text-white selection:bg-white selection:text-black">
       
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
