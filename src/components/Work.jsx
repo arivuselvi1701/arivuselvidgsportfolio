@@ -96,12 +96,12 @@ export default function Work() {
               </div>
 
               {/* Text Content */}
-              <div className="flex justify-between items-start mt-6 w-full text-white">
+              <div className="flex flex-col md:flex-row justify-between items-start mt-6 w-full text-white gap-4 md:gap-0">
                 <div>
                   <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-sm md:text-base text-white/60 max-w-[280px] leading-relaxed">
+                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-[280px] leading-relaxed">
                     {project.desc}
                   </p>
                 </div>
@@ -142,12 +142,12 @@ export default function Work() {
               </div>
 
               {/* Text Content */}
-              <div className="flex justify-between items-start mt-6 w-full text-white">
+              <div className="flex flex-col md:flex-row justify-between items-start mt-6 w-full text-white gap-4 md:gap-0">
                 <div>
                   <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-sm md:text-base text-white/60 max-w-[280px] leading-relaxed">
+                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-[280px] leading-relaxed">
                     {project.desc}
                   </p>
                 </div>

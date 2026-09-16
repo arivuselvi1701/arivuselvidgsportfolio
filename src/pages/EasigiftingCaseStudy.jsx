@@ -88,7 +88,7 @@ export default function EasigiftingCaseStudy() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-8 border-t border-ink/10"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-8 border-t border-ink/10"
           >
             <div>
               <div className="text-ink/50 text-[10px] uppercase tracking-widest mb-2 font-semibold">Role</div>
@@ -139,7 +139,7 @@ export default function EasigiftingCaseStudy() {
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>The challenge wasn't simply to design a gifting platform. It was to solve a tension between two different expectations.</p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+              <div className="grid grid-cols-2 gap-4 my-8">
                 <motion.div 
                   whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
                   className="bg-[#151515] p-6 rounded-2xl border border-white/10 shadow-sm transition-colors hover:border-white/30/40"
@@ -295,7 +295,7 @@ export default function EasigiftingCaseStudy() {
                 <blockquote className="border-l-4 border-white/30 pl-6 my-6 italic text-lg text-white/70">
                   "When the sender can't know the perfect choice, give the recipient the choice."
                 </blockquote>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                <div className="grid grid-cols-3 gap-4 mt-8">
                   <img src="/eg5.jpg" alt="Designing for flexible gifting" className="w-full h-auto rounded-xl border border-white/10" />
                   <img src="/eg5a.jpg" alt="Designing for flexible gifting" className="w-full h-auto rounded-xl border border-white/10" />
                   <img src="/eg5b.jpg" alt="Designing for flexible gifting" className="w-full h-auto rounded-xl border border-white/10" />
@@ -319,7 +319,7 @@ export default function EasigiftingCaseStudy() {
                 <blockquote className="border-l-4 border-white/30 pl-6 my-6 italic text-lg text-white/70">
                   "Functional when it needs to be. Emotional when it matters."
                 </blockquote>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                <div className="grid grid-cols-2 gap-4 mt-8">
                   <img src="/eg7.jpg" alt="Creating an emotional moment" className="w-full h-auto rounded-xl border border-white/10" />
                   <img src="/eg7a.jpg" alt="Creating an emotional moment" className="w-full h-auto rounded-xl border border-white/10" />
                 </div>
