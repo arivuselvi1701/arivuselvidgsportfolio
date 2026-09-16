@@ -209,7 +209,7 @@ export default function Websites() {
   return (
     <section id="websites" className="bg-cream text-ink relative">
       {/* Header section to introduce the stacking cards */}
-      <div className="h-[40vh] flex flex-col items-center justify-end pb-10 px-6 text-center">
+      <div className="pt-24 md:pt-32 pb-0 md:pb-8 px-6 flex flex-col items-center text-center">
         <h2 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-medium text-balance leading-tight tracking-tight mb-6 text-ink">
           Design before AI era<br />just with Figma
         </h2>
