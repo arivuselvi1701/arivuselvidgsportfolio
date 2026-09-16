@@ -93,6 +93,23 @@ export default function Hero() {
           <a href="https://arivuselvi1701.github.io/Assets/Arivuselvi_Resume.pdf" target="_blank" rel="noreferrer" className="mt-8 px-8 py-3.5 bg-white text-black hover:bg-white/90 text-xs font-semibold uppercase tracking-widest rounded-full transition-all duration-300 w-fit shadow-lg shadow-black/20">
             Download Resume
           </a>
+
+          <div className="mt-12 flex items-center gap-8 md:gap-12">
+            <div className="flex flex-col items-center md:items-start">
+              <span className="font-serif text-3xl md:text-4xl font-medium">6+</span>
+              <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.15em] uppercase text-white/60 mt-1">Projects</span>
+            </div>
+            <div className="w-[1px] h-8 bg-white/20"></div>
+            <div className="flex flex-col items-center md:items-start">
+              <span className="font-serif text-3xl md:text-4xl font-medium">1+</span>
+              <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.15em] uppercase text-white/60 mt-1">Years Design</span>
+            </div>
+            <div className="w-[1px] h-8 bg-white/20"></div>
+            <div className="flex flex-col items-center md:items-start">
+              <span className="font-serif text-3xl md:text-4xl font-medium">50+</span>
+              <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.15em] uppercase text-white/60 mt-1">Websites</span>
+            </div>
+          </div>
         </motion.div>
 
         {/* Bottom Right: Project Slider Box */}
