@@ -344,13 +344,6 @@ export default function EasigiftingCaseStudy() {
               </div>
               <p className="mt-6">The intention wasn't to make the entire product decorative. It was to create a clear visual distinction between <strong>using the system</strong> and <strong>receiving the gift</strong>.</p>
               
-              <div className="mt-12 mb-6">
-                <img src="/easigifting-screens.png" alt="Easigifting Authentication Screens" className="w-full rounded-xl border border-white/10" />
-              </div>
-              
-              <p className="text-white/70">
-                In the functional flows—like signing in, resetting passwords, and managing accounts—the UI remains intentionally sparse. We relied entirely on <strong>Royal Blue</strong> for primary buttons and text links against a clean white canvas. This deliberate restraint establishes trust and operational clarity right from the onboarding stage, saving the more expressive brand colors (like Violet and Emerald) for the actual gifting and recipient reveal moments.
-              </p>
             </div>
           </section>
 
