@@ -54,7 +54,7 @@ export default function Hero() {
           className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-black/10 mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}></div>
-        <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-black/80 pointer-events-none"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 pointer-events-none"></div>
       </div>
 
@@ -84,7 +84,7 @@ export default function Hero() {
           <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight mb-6" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
             Product Designer
           </h2>
-          <div className="flex flex-col items-center md:items-start text-[11px] md:text-xs font-semibold tracking-[0.15em] leading-relaxed text-white/80 uppercase">
+          <div className="flex flex-col items-center md:items-start gap-2 text-[11px] md:text-xs font-semibold tracking-[0.15em] leading-relaxed text-white/80 uppercase">
             <span>Designed to Endure.</span>
             <span>Built to Function.</span>
             <span>Considered in Every Detail.</span>
