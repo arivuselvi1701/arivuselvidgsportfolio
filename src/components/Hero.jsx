@@ -44,14 +44,14 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-[100svh] w-full overflow-hidden flex flex-col justify-center md:justify-between py-12 md:pt-32 md:pb-32 px-8 md:px-16 text-white selection:bg-white selection:text-black">
+    <section id="home" className="relative min-h-[100svh] w-full overflow-hidden flex flex-col justify-center md:justify-between py-12 md:pt-20 md:pb-20 px-8 md:px-16 text-white selection:bg-white selection:text-black">
       
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src="/coverimage.png" 
           alt="Hero Background" 
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-[50%_15%]"
         />
         <div className="absolute inset-0 bg-black/10 mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}></div>
         <div className="absolute inset-0 bg-black/80 pointer-events-none"></div>
@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
       {/* Top Massive Title - Particle Hover Effect */}
-      <div className="relative z-10 w-full h-[120px] md:h-[400px] flex justify-center mt-12 mb-24 md:mt-0 md:-mt-20 md:mb-0">
+      <div className="relative z-10 w-full h-[120px] md:h-[250px] flex justify-center mt-12 mb-24 md:mt-0 md:-mt-20 md:mb-0">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
