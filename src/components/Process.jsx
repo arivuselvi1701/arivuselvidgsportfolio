@@ -12,7 +12,7 @@ const experiences = [
       'Solely Owned the end-to-end product design lifecycle, from understanding business requirements and conducting user research to designing, validating, launching, and iterating digital products.',
       'Built and maintained scalable design systems in Figma, including components, typography, and color systems, helping improve UI production efficiency across projects.',
       'Improved design-to-development accuracy by establishing a structured Figma-to-developer handoff process with annotated specifications and component documentation.',
-      'Conducted iterative design reviews directly with clients, ensuring quick feedback incorporation and smooth design iteration cycles.',
+      'Work closely with clients, customers, and internal stakeholders to present product concepts, conduct demos, gather feedback, and translate feedback into actionable design iterations.',
       'Collaborated closely with developers throughout the build phase — clarifying design intent, resolving implementation queries, and ensuring pixel-accurate delivery until project completion.',
       'Integrated AI-assisted design tools including Claude Code, Antigravity, codex, framer, UXmagic.ai, Lovable and Figma Make for ideation and rapid prototyping, reducing ideation-to-wireframe time from 2 days to under 4 hours.',
       'Ensured accessibility, responsive design, and visual consistency across web and mobile platforms.'
