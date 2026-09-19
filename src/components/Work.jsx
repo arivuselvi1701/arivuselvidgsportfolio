@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const projects = [
@@ -37,6 +37,78 @@ const projects = [
   }
 ];
 
+
+const ProjectCard = ({ project }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.4 });
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const Component = project.isInternal ? Link : 'a';
+  const props = project.isInternal 
+    ? { to: project.link } 
+    : { href: project.link, target: "_blank", rel: "noreferrer" };
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <Component 
+        {...props}
+        className={`relative z-10 group flex flex-col w-[85vw] md:w-[450px] md:hover:w-[900px] transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${isMobile && isInView ? 'mobile-active' : ''}`}
+      >
+        {/* Text Content */}
+        <div className="flex flex-col md:flex-row justify-between items-start mb-6 w-full text-white gap-4 md:gap-0">
+          <div>
+            <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
+              {project.title}
+            </h3>
+            <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-lg leading-relaxed">
+              {project.desc}
+            </p>
+          </div>
+          <div className="text-white/40 text-xs font-mono tracking-widest uppercase flex items-center gap-4">
+            <span className="w-8 h-[1px] bg-white/20"></span>
+            {project.year}
+          </div>
+        </div>
+        {/* Image Wrapper */}
+        <div className="relative w-full h-[50vh] md:h-[550px] overflow-hidden bg-[#222]">
+          <img 
+            src={project.image} 
+            alt={project.title} 
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 [.mobile-active_&]:scale-105 ${project.hoverImage ? 'group-hover:opacity-0 [.mobile-active_&]:opacity-0' : ''}`} 
+          />
+          {project.hoverImage && (
+            <img 
+              src={project.hoverImage} 
+              alt={project.title + ' hover'} 
+              className="absolute inset-0 w-full h-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] opacity-0 group-hover:opacity-100 [.mobile-active_&]:opacity-100 group-hover:scale-105 [.mobile-active_&]:scale-105" 
+            />
+          )}
+          
+          {/* Hover View Button */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 [.mobile-active_&]:bg-black/30 transition-colors duration-500">
+            <span className="opacity-0 group-hover:opacity-100 [.mobile-active_&]:opacity-100 translate-y-4 group-hover:translate-y-0 [.mobile-active_&]:translate-y-0 transition-all duration-500 delay-100 border border-white/40 px-6 py-3 text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-white backdrop-blur-sm">
+              View Project
+            </span>
+          </div>
+        </div>
+      </Component>
+    </motion.div>
+  );
+};
+
 export default function Work() {
   return (
     <div id="works" className="bg-[#151212] flex flex-col">
@@ -67,111 +139,7 @@ export default function Work() {
             </motion.h2>
           </div>
 
-          {project.isInternal ? (
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <Link 
-              to={project.link} 
-              className="relative z-10 group flex flex-col w-[85vw] md:w-[450px] md:hover:w-[900px] transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
-            >
-              {/* Text Content */}
-              <div className="flex flex-col md:flex-row justify-between items-start mb-6 w-full text-white gap-4 md:gap-0">
-                <div>
-                  <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-lg leading-relaxed">
-                    {project.desc}
-                  </p>
-                </div>
-                <div className="text-white/40 text-xs font-mono tracking-widest uppercase flex items-center gap-4">
-                  <span className="w-8 h-[1px] bg-white/20"></span>
-                  {project.year}
-                </div>
-              </div>
-              {/* Image Wrapper */}
-              <div className="relative w-full h-[50vh] md:h-[550px] overflow-hidden bg-[#222]">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 ${project.hoverImage ? 'group-hover:opacity-0' : ''}`} 
-                />
-                {project.hoverImage && (
-                  <img 
-                    src={project.hoverImage} 
-                    alt={project.title + ' hover'} 
-                    className="absolute inset-0 w-full h-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] opacity-0 group-hover:opacity-100 group-hover:scale-105" 
-                  />
-                )}
-                
-                {/* Hover View Button */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-colors duration-500">
-                  <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 border border-white/40 px-6 py-3 text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-white backdrop-blur-sm">
-                    View Project
-                  </span>
-                </div>
-              </div>
-
-            </Link>
-            </motion.div>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <a 
-              href={project.link} 
-              target="_blank" 
-              rel="noreferrer"
-              className="relative z-10 group flex flex-col w-[85vw] md:w-[450px] md:hover:w-[900px] transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
-            >
-              {/* Text Content */}
-              <div className="flex flex-col md:flex-row justify-between items-start mb-6 w-full text-white gap-4 md:gap-0">
-                <div>
-                  <h3 className="font-serif text-3xl md:text-4xl font-medium mb-2 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-white/60 max-w-full md:max-w-lg leading-relaxed">
-                    {project.desc}
-                  </p>
-                </div>
-                <div className="text-white/40 text-xs font-mono tracking-widest uppercase flex items-center gap-4">
-                  <span className="w-8 h-[1px] bg-white/20"></span>
-                  {project.year}
-                </div>
-              </div>
-              {/* Image Wrapper */}
-              <div className="relative w-full h-[50vh] md:h-[550px] overflow-hidden bg-[#222]">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 ${project.hoverImage ? 'group-hover:opacity-0' : ''}`} 
-                />
-                {project.hoverImage && (
-                  <img 
-                    src={project.hoverImage} 
-                    alt={project.title + ' hover'} 
-                    className="absolute inset-0 w-full h-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] opacity-0 group-hover:opacity-100 group-hover:scale-105" 
-                  />
-                )}
-                
-                {/* Hover View Button */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-colors duration-500">
-                  <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 border border-white/40 px-6 py-3 text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-white backdrop-blur-sm">
-                    View Project
-                  </span>
-                </div>
-              </div>
-
-            </a>
-            </motion.div>
-          )}
+          <ProjectCard project={project} />
 
         </section>
       ))}
