@@ -9,7 +9,7 @@ const experiences = [
     badge: 'CURRENT',
     bullets: [
       'Skilled in both manual product design using components, variables, and design systems, as well as AI-powered design tools for faster workflows — while always keeping user experience, usability, and design consistency as the top priority.',
-      'Owned complete end-to-end UI design lifecycle across multiple client products — from client discovery and user flow design through wireframing, high-fidelity UI, and developer handoff.',
+      'Solely Owned the end-to-end product design lifecycle, from understanding business requirements and conducting user research to designing, validating, launching, and iterating digital products.',
       'Built and maintained scalable design systems in Figma, including components, typography, and color systems, helping improve UI production efficiency across projects.',
       'Improved design-to-development accuracy by establishing a structured Figma-to-developer handoff process with annotated specifications and component documentation.',
       'Conducted iterative design reviews directly with clients, ensuring quick feedback incorporation and smooth design iteration cycles.',
