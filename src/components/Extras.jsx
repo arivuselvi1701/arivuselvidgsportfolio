@@ -5,8 +5,8 @@ import { PenTool, Layout, Code2, Sparkles, Wand2, Hexagon, Layers } from 'lucide
 
 export function Logos() {
   const icons = {
-    claude: <img src="/claude-logo.png" alt="Claude" className="w-7 h-7 object-contain opacity-90 rounded-sm" />,
-    antigravity: <img src="/antigravity-logo.png" alt="Antigravity" className="w-7 h-7 object-contain opacity-90" />,
+    claude: <svg className="w-7 h-7 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v18" /><path d="M3 12h18" /><path d="m5.6 5.6 12.8 12.8" /><path d="m18.4 5.6-12.8 12.8" /></svg>,
+    antigravity: <svg className="w-7 h-7 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20c0-8 4-16 8-16s8 8 8 16" /></svg>,
     codex: <svg className="w-7 h-7 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>,
     framer: <svg className="w-7 h-7 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"><path d="M5 2h14v7H12z"/><path d="M5 9h7l7 7H5z"/><path d="M5 16h7v7l-7-7z"/></svg>,
     figma: <svg className="w-7 h-7 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 9h3.5a3.5 3.5 0 1 1 0 7H12V9z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/><path d="M8.5 16H12v4.5a3.5 3.5 0 1 1-3.5-3.5z"/></svg>,
