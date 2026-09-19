@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const experiences = [
   {
     date: '03/2025 – PRESENT',
-    title: 'Product Designer',
+    title: 'Lead Product Designer',
     company: 'Grey Feathers',
     badge: 'CURRENT',
     bullets: [
