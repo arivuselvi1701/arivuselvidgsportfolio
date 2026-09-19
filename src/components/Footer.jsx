@@ -34,7 +34,7 @@ export function CTA() {
               Let's Connect
             </a>
             <a 
-              href="https://arivuselvi1701.github.io/Assets/Arivuselvi_Resume.pdf" 
+              href="/Arivuselvi_Resume.pdf" 
               target="_blank" rel="noreferrer"
               className="px-10 py-5 bg-transparent border border-cream/30 text-cream text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-cream/10 transition-colors duration-300 text-center"
             >

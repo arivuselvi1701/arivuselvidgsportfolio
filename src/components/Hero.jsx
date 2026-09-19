@@ -90,7 +90,7 @@ export default function Hero() {
             <span>Considered in Every Detail.</span>
           </div>
           
-          <a href="https://arivuselvi1701.github.io/Assets/Arivuselvi_Resume.pdf" target="_blank" rel="noreferrer" className="mt-8 px-8 py-3.5 bg-white text-black hover:bg-white/90 text-xs font-semibold uppercase tracking-widest rounded-full transition-all duration-300 w-fit shadow-lg shadow-black/20">
+          <a href="/Arivuselvi_Resume.pdf" target="_blank" rel="noreferrer" className="mt-8 px-8 py-3.5 bg-white text-black hover:bg-white/90 text-xs font-semibold uppercase tracking-widest rounded-full transition-all duration-300 w-fit shadow-lg shadow-black/20">
             Download Resume
           </a>
 
