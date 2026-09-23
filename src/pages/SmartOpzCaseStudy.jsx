@@ -17,7 +17,7 @@ export default function SmartOpzCaseStudy() {
     { id: 'core-insight', title: 'The Core Insight' },
     { id: 'challenges', title: 'Challenges' },
     { id: 'content', title: 'How I solved' },
-    { id: 'language', title: 'Design Language' },
+    { id: 'language', title: 'Design' },
     { id: 'alignment', title: 'Team Alignment' },
     { id: 'results', title: 'Results' },
     { id: 'learned', title: 'What I Learned' },
@@ -309,12 +309,13 @@ export default function SmartOpzCaseStudy() {
 
           <section id="language" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">08</span> Design Language
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">08</span> Design
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
-              <p>Screens were built using Figma Make, with Claude Code, Codex, and Antigravity supporting the build.</p>
-              <div className="p-6 bg-white/5 border border-white/10 rounded-xl text-sm italic text-white/50">
-                Placeholder: typography, color palette, and component library will be documented here once screenshots and the Figma file are added to this case study.
+              <div className="flex flex-col gap-12 w-full mt-4">
+                <img src="/smartopzimage1.jpg" alt="SmartOpz Design 1" className="w-full rounded-2xl shadow-xl border border-white/10" />
+                <img src="/smartopzimage2.jpg" alt="SmartOpz Design 2" className="w-full rounded-2xl shadow-xl border border-white/10" />
+                <img src="/smartopzimage3.jpg" alt="SmartOpz Design 3" className="w-full rounded-2xl shadow-xl border border-white/10" />
               </div>
             </div>
           </section>
