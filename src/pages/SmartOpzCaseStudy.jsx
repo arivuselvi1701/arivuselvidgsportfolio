@@ -11,6 +11,8 @@ export default function SmartOpzCaseStudy() {
 
   const sections = [
     { id: 'the-problem', title: 'The Problem' },
+    { id: 'my-role', title: 'My Role' },
+    { id: 'working-alongside-ai', title: 'Working Alongside AI' },
     { id: 'research', title: 'Research & Discovery' },
     { id: 'core-insight', title: 'The Core Insight' },
     { id: 'challenges', title: 'Challenges' },
@@ -90,7 +92,7 @@ export default function SmartOpzCaseStudy() {
             </div>
             <div>
               <div className="text-xs font-mono tracking-widest text-ink/50 uppercase mb-2">Scope</div>
-              <div className="font-medium text-ink/90">End-to-end UX/UI</div>
+              <div className="font-medium text-ink/90">End to End Product design From Research to after launch support and iterations</div>
             </div>
             <div>
               <div className="text-xs font-mono tracking-widest text-ink/50 uppercase mb-2">Timeline</div>
@@ -180,10 +182,77 @@ export default function SmartOpzCaseStudy() {
               </div>
             </div>
           </section>
+          <section id="my-role" className="scroll-mt-32 mt-24">
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">02</span> My Role
+            </motion.h2>
+            
+            <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
+              <p>I owned SmartOpz end to end, from understanding the product and researching user needs to designing, validating, launching, and iterating the experience.</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                {[
+                  { title: "Beyond Design", desc: "Involved in client discussions, requirement gathering, and demos." },
+                  { title: "Quality & Validation", desc: "Post-development testing and validating whether the final product matched the intended experience." },
+                  { title: "Continuous Improvement", desc: "Gathered feedback from customers and used it to drive continuous improvements." },
+                  { title: "Full Ownership", desc: "Acted as the sole product designer, taking responsibility for the end-to-end outcome." }
+                ].map((role, i) => (
+                  <motion.div key={i} whileHover={{ scale: 1.02, y: -4 }} className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors cursor-pointer group shadow-lg">
+                    <h3 className="text-white/90 font-medium mb-3 group-hover:text-accent-light transition-colors font-serif text-xl">{role.title}</h3>
+                    <p className="text-sm text-white/50 group-hover:text-white/70 transition-colors leading-relaxed">{role.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="working-alongside-ai" className="scroll-mt-32 mt-24">
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">03</span> Working Alongside AI
+            </motion.h2>
+            
+            <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
+              <p>AI became part of my workflow throughout the project. I used tools to explore ideas, create initial drafts, and accelerate different stages of the design and development process.</p>
+              
+              <div className="flex flex-wrap gap-3 py-4">
+                {['Claude Code', 'Figma Make', 'Antigravity', 'Codex', 'ChatGPT'].map((tool, i) => (
+                  <motion.span key={i} whileHover={{ scale: 1.05, y: -2 }} className="px-5 py-2.5 rounded-full border border-white/10 bg-white/5 text-sm font-mono text-white/80 cursor-default hover:border-accent-light hover:text-accent-light transition-colors shadow-sm">
+                    {tool}
+                  </motion.span>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <motion.div whileHover={{ y: -5 }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 group cursor-pointer relative overflow-hidden shadow-xl">
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-accent-dark/20 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100" />
+                  <h3 className="font-serif text-2xl text-white/90 mb-4 relative z-10">Product Thinking First</h3>
+                  <p className="text-white/60 leading-relaxed text-sm relative z-10">
+                    I didn't treat AI as the decision-maker. I used its output as a starting point, then applied my own product thinking to decide what made sense for SmartOpz, the users, and the business.
+                  </p>
+                </motion.div>
+                
+                <motion.div whileHover={{ y: -5 }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 group cursor-pointer relative overflow-hidden shadow-xl">
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-accent-dark/20 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100" />
+                  <h3 className="font-serif text-2xl text-white/90 mb-4 relative z-10">Validation is Key</h3>
+                  <p className="text-white/60 leading-relaxed text-sm relative z-10">
+                    One of the biggest things I learned was that getting something that <em className="text-white italic">looks right</em> doesn't necessarily mean it <em className="text-white italic">works right</em>. AI-generated output could sometimes miss edge cases or interpret an instruction differently from what I intended. This pushed me to become more precise with my prompts and specifications, and more rigorous about validating the final implementation.
+                  </p>
+                </motion.div>
+              </div>
+
+              <motion.div whileHover={{ scale: 1.01 }} className="mt-10 p-8 bg-[#151515] rounded-2xl border border-white/20 hover:border-accent-light/50 transition-colors cursor-pointer shadow-2xl relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent-dark/10 to-transparent opacity-50" />
+                <p className="font-serif text-xl md:text-2xl text-white/90 text-center relative z-10">
+                  That became an important part of my workflow: <strong className="text-white">use AI to move faster, but rely on product thinking, validation, and judgment to move in the right direction.</strong>
+                </p>
+              </motion.div>
+            </div>
+          </section>
+
 
           <section id="research" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">02</span> Research & Discovery
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">04</span> Research & Discovery
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <ul className="space-y-4 pl-4 border-l-2 border-white/10">
@@ -198,7 +267,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="core-insight" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">03</span> The Core Insight
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">05</span> The Core Insight
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>One rule runs through all of SmartOpz: nothing happens directly — it's requested, then approved, then it becomes real.</p>
@@ -211,7 +280,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="challenges" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">04</span> Challenges
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">06</span> Challenges
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <h4 className="text-xl font-bold text-white mt-8 mb-4">Configurability vs. Simplicity</h4>
@@ -222,10 +291,14 @@ export default function SmartOpzCaseStudy() {
               </div>
             </div>
           </section>
+
+          
+
+          
           
           <section id="system" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">05</span> The System
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">07</span> The System
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>An employee doesn't take leave, they raise a Leave Request. No one buys a laptop, someone raises a Procurement Request. Once it's approved, the system turns it into the real outcome.</p>
@@ -234,7 +307,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="content" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">06</span> Content Model
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">08</span> Content Model
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>At first, everything was fully configurable, with nothing set by default. Some flows didn't work at all until someone configured them. To fix this, key ticket types shipped with defaults, kept fully editable.</p>
@@ -244,7 +317,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="language" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">07</span> Design Language
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">09</span> Design Language
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>Screens were built using Figma Make, with Claude Code, Codex, and Antigravity supporting the build.</p>
@@ -256,7 +329,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="alignment" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">08</span> Team Alignment
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">10</span> Team Alignment
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>Ticketing, CAPEX, and OPEX were new to me and the team, and the client's requirements weren't fully clear at the start. I went and learned it directly — talking to people who work with ticketing systems every day, and running sessions with a CA to understand how CAPEX and OPEX really work.</p>
@@ -266,7 +339,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="results" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">09</span> Results
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">11</span> Results
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose mb-8">
               <p>SmartOpz is live and used daily inside the client's own company (not yet by their customers). The core workflows and unified system have generally worked well for people; some users still find configuration confusing, which we're actively working on.</p>
@@ -283,7 +356,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="learned" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">10</span> What I Learned
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">12</span> What I Learned
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-[60px_1fr] gap-6 items-start py-8 border-b border-white/10">
@@ -305,7 +378,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="next" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">11</span> Next Step
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">13</span> Next Step
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>We strive to give our best. I visit the app regularly and test flows at random, which often brings a new edge case to light. I'm also fortunate to have a client call every week, and together we keep finding ways to make the product better, every day. Whenever a new idea comes up, I reason through it carefully before we build it, so each change makes the product a little better than before. It's a continuous process, and one we genuinely enjoy being part of.</p>
