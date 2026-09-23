@@ -16,7 +16,6 @@ export default function SmartOpzCaseStudy() {
     { id: 'research', title: 'Research & Discovery' },
     { id: 'core-insight', title: 'The Core Insight' },
     { id: 'challenges', title: 'Challenges' },
-    { id: 'system', title: 'The System' },
     { id: 'content', title: 'Content Model' },
     { id: 'language', title: 'Design Language' },
     { id: 'alignment', title: 'Team Alignment' },
@@ -296,18 +295,11 @@ export default function SmartOpzCaseStudy() {
 
           
           
-          <section id="system" className="scroll-mt-32">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">07</span> The System
-            </motion.h2>
-            <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
-              <p>An employee doesn't take leave, they raise a Leave Request. No one buys a laptop, someone raises a Procurement Request. Once it's approved, the system turns it into the real outcome.</p>
-            </div>
-          </section>
+          
 
           <section id="content" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">08</span> Content Model
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">07</span> Content Model
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>At first, everything was fully configurable, with nothing set by default. Some flows didn't work at all until someone configured them. To fix this, key ticket types shipped with defaults, kept fully editable.</p>
@@ -317,7 +309,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="language" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">09</span> Design Language
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">08</span> Design Language
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>Screens were built using Figma Make, with Claude Code, Codex, and Antigravity supporting the build.</p>
@@ -329,7 +321,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="alignment" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">10</span> Team Alignment
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">09</span> Team Alignment
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>Ticketing, CAPEX, and OPEX were new to me and the team, and the client's requirements weren't fully clear at the start. I went and learned it directly — talking to people who work with ticketing systems every day, and running sessions with a CA to understand how CAPEX and OPEX really work.</p>
@@ -339,7 +331,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="results" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">11</span> Results
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">10</span> Results
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose mb-8">
               <p>SmartOpz is live and used daily inside the client's own company (not yet by their customers). The core workflows and unified system have generally worked well for people; some users still find configuration confusing, which we're actively working on.</p>
@@ -356,7 +348,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="learned" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">12</span> What I Learned
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">11</span> What I Learned
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-[60px_1fr] gap-6 items-start py-8 border-b border-white/10">
@@ -378,7 +370,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="next" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">13</span> Next Step
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">12</span> Next Step
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>We strive to give our best. I visit the app regularly and test flows at random, which often brings a new edge case to light. I'm also fortunate to have a client call every week, and together we keep finding ways to make the product better, every day. Whenever a new idea comes up, I reason through it carefully before we build it, so each change makes the product a little better than before. It's a continuous process, and one we genuinely enjoy being part of.</p>
