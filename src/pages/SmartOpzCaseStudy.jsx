@@ -16,7 +16,7 @@ export default function SmartOpzCaseStudy() {
     { id: 'research', title: 'Research & Discovery' },
     { id: 'core-insight', title: 'The Core Insight' },
     { id: 'challenges', title: 'Challenges' },
-    { id: 'content', title: 'Content Model' },
+    { id: 'content', title: 'How I solved' },
     { id: 'language', title: 'Design Language' },
     { id: 'alignment', title: 'Team Alignment' },
     { id: 'results', title: 'Results' },
@@ -299,7 +299,7 @@ export default function SmartOpzCaseStudy() {
 
           <section id="content" className="scroll-mt-32">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: '-50px' }} transition={{ duration: 0.5 }} className="font-serif text-3xl md:text-4xl font-medium text-white mb-8 pb-4 border-b border-white/10 flex items-center">
-              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">07</span> Content Model
+              <span className="text-white/40 mr-4 text-2xl font-mono tracking-widest">07</span> How I solved
             </motion.h2>
             <div className="space-y-6 text-white/70 text-base md:text-[17px] font-medium leading-loose">
               <p>At first, everything was fully configurable, with nothing set by default. Some flows didn't work at all until someone configured them. To fix this, key ticket types shipped with defaults, kept fully editable.</p>
