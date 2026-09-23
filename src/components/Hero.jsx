@@ -82,7 +82,7 @@ export default function Hero() {
           className="flex flex-col items-center md:items-start text-center md:text-left"
         >
           <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight mb-6" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
-            Lead Product Designer
+            Product Designer
           </h2>
           <div className="flex flex-col items-center md:items-start gap-2 text-[11px] md:text-xs font-semibold tracking-[0.15em] leading-relaxed text-white/80 uppercase">
             <span>Designed to Endure.</span>
@@ -101,7 +101,7 @@ export default function Hero() {
             </div>
             <div className="w-[1px] h-8 bg-white/20"></div>
             <div className="flex flex-col items-center md:items-start">
-              <span className="font-serif text-3xl md:text-4xl font-medium">1+</span>
+              <span className="font-serif text-3xl md:text-4xl font-medium">1.6+</span>
               <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.15em] uppercase text-white/60 mt-1">Years Design</span>
             </div>
             <div className="w-[1px] h-8 bg-white/20"></div>

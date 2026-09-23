@@ -26,7 +26,7 @@ export default function About() {
             
             <div className="mt-8 border-t border-line pt-6">
               <h3 className="font-serif text-2xl font-medium">Arivuselvi GM</h3>
-              <p className="text-sm text-muted mt-1">Lead Product Designer</p>
+              <p className="text-sm text-muted mt-1">Product Designer</p>
             </div>
           </div>
 
