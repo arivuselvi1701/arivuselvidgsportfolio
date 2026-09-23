@@ -91,7 +91,7 @@ export default function SmartOpzCaseStudy() {
             </div>
             <div>
               <div className="text-xs font-mono tracking-widest text-ink/50 uppercase mb-2">Scope</div>
-              <div className="font-medium text-ink/90">End to End Product design From Research to after launch support and iterations</div>
+              <div className="font-medium text-ink/90">End to End Product design</div>
             </div>
             <div>
               <div className="text-xs font-mono tracking-widest text-ink/50 uppercase mb-2">Timeline</div>
